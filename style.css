@@ -24,9 +24,10 @@ body {
   
 }
 
-#reset {
-  width: 100px; /* Increase size as needed */
-  height: 50px; /* Adjust height */
-  font-size: 16px; /* Optional: Make text inside button larger */
+#reset, #newGridButton {
+  width: 100px;
+  height: 50px;
+  font-size: 16px;
+  /* Other shared styles */
 }
 
