@@ -25,55 +25,6 @@ resetButton.addEventListener('click', ()=> {
 
 })
 
-const newGridButton = document.getElementById("newGridButton");
-const container = document.getElementById("container");
-
-newGridButton.addEventListener('click', () => { 
-  let newGrid = prompt("Number per side for new grid:");
-  newGrid = Number(newGrid);
-
-  if (isNaN(newGrid) || newGrid < 1 || newGrid > 100) {
-    console.log("Invalid choice. Try again.");
-    return; // Exit early if input is invalid
-  }
-
-  // Clear existing grid squares
-  container.innerHTML = "";
-
-  // Dynamically create new squares based on the input size
-  const totalSquares = newGrid * newGrid; // Calculate total number of squares
-  for (let i = 0; i < totalSquares; i++) {
-    const square = document.createElement("div");
-    square.classList.add("square");
-    container.appendChild(square);
-  }
-
-  // Reapply hover effect after creating the new grid
-  const squares = document.querySelectorAll(".square");
-  squares.forEach(square => {
-    square.addEventListener("mouseenter", () => {
-      square.style.backgroundColor = "red"; // Change color dynamically
-    });
-  });
-
-  // Adjust container size dynamically based on new grid size
-  container.style.width = `${newGrid * 50}px`;
-  container.style.height = `${newGrid * 50}px`;
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // const newGridButton = document.getElementById("newGridButton");
